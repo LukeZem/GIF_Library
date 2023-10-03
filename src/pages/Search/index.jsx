@@ -1,8 +1,11 @@
 import React from 'react'
+import SearchBar from '../../components/searchBar'
 
 const Search = () => {
   return (
-    <div>Search</div>
+    <div>
+      <SearchBar />
+    </div>
   )
 }
 
