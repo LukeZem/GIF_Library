@@ -78,11 +78,8 @@ const SearchBar = () => {
           }}>
           Previous
         </Button>
-      </div>
-      <div id='gif-card'>
         <GifCard />
       </div>
-
     </div>
   );
 };
