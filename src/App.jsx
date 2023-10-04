@@ -1,18 +1,19 @@
 import React, { useContext, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import CssBaseline from '@mui/material/CssBaseline';
-import Container from '@mui/material/Container';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
+// import CssBaseline from '@mui/material/CssBaseline';
+// import Container from '@mui/material/Container';
+// import AppBar from '@mui/material/AppBar';
+import { Toolbar, AppBar, Container, CssBaseline, Button } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
-import Button from '@mui/material/Button';
-import HomeIcon from '@mui/icons-material/Home';
-import SearchIcon from '@mui/icons-material/Search';
-import FavoriteIcon from '@mui/icons-material/Favorite';
+// import Button from '@mui/material/Button';
+import { Home, Search, Favorite } from "@mui/icons-material";
+// import HomeIcon from '@mui/icons-material/Home';
+// import SearchIcon from '@mui/icons-material/Search';
+// import FavoriteIcon from '@mui/icons-material/Favorite';
 import Footer from './components/Footer';
-import Home from './pages/Home';
-import Search from './pages/Search';
-import Favorites from './pages/Favorites';
+import HomePage from './pages/HomePage';
+import SearchPage from './pages/SearchPage';
+import FavoritesPage from './pages/FavoritesPage';
 import "./App.css"
 import { gifsContext } from './contexts/GIFsContext';
 
@@ -26,18 +27,18 @@ function App() {
   return (
     <>
       <CssBaseline />
-      
+
       <div id="main-container">
-        
+
         <AppBar position="fixed">
           <Toolbar>
-            <Button color="inherit" component={RouterLink} to="/" startIcon={<HomeIcon />}>
+            <Button color="inherit" component={RouterLink} to="/" startIcon={<Home />}>
               Home
             </Button>
-            <Button color="inherit" component={RouterLink} to="/search" startIcon={<SearchIcon />}>
+            <Button color="inherit" component={RouterLink} to="/search" startIcon={<Search />}>
               Search
             </Button>
-            <Button color="inherit" component={RouterLink} to="/favorites" startIcon={<FavoriteIcon />}>
+            <Button color="inherit" component={RouterLink} to="/favorites" startIcon={<Favorite />}>
               Favorites
             </Button>
           </Toolbar>
@@ -46,9 +47,9 @@ function App() {
         <div id="content-container">
           <Container>
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/search" element={<Search />} />
-              <Route path="/favorites" element={<Favorites />} />
+              <Route path="/" element={<HomePage />} />
+              <Route path="/search" element={<SearchPage />} />
+              <Route path="/favorites" element={<FavoritesPage />} />
             </Routes>
           </Container>
         </div>

@@ -7,6 +7,7 @@ export const PrimaryProvider = (props) => {
     const [userName, setUserName] = useState("")
     const [input, setInput] = useState("")
     const [err, setErr] = useState(false);
+    const [offset, setOffset] = useState(0);
 
     return (<primaryContext.Provider value={
         {
@@ -15,7 +16,9 @@ export const PrimaryProvider = (props) => {
             input,
             setInput,
             err,
-            setErr
+            setErr,
+            offset,
+            setOffset
             //more broad context here
         }
     }>

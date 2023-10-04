@@ -3,16 +3,17 @@ import { createContext, useContext, useState } from "react";
 export const gifsContext = createContext();
 
 export const GIFsProvider = (props) => {
-    const [query, setQuery] = useState('');
+    // const [query, setQuery] = useState('');
     const [gifs, setGifs] = useState([]);
+
 
 
     return (<gifsContext.Provider value={
         {
-            query,
-            setQuery,
+            // query,
+            // setQuery,
             gifs,
-            setGifs
+            setGifs,
         }
     }>
         {props.children}

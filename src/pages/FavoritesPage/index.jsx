@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const Favorites = () => {
+const FavoritesPage = () => {
   return (
     <div>
       <h1>My Library</h1>
@@ -9,4 +9,4 @@ const Favorites = () => {
   )
 }
 
-export default Favorites
+export default FavoritesPage
