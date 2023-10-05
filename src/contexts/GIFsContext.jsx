@@ -5,6 +5,11 @@ export const gifsContext = createContext();
 export const GIFsProvider = (props) => {
     // const [query, setQuery] = useState('');
     const [gifs, setGifs] = useState([]);
+    const [favs, setFavs] = useState(() => {
+        const storedFavs = localStorage.getItem('favs');
+        return storedFavs ? JSON.parse(storedFavs) : [];
+    });
+
 
 
 
@@ -14,6 +19,8 @@ export const GIFsProvider = (props) => {
             // setQuery,
             gifs,
             setGifs,
+            favs,
+            setFavs
         }
     }>
         {props.children}

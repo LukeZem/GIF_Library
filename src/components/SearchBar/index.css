@@ -1,5 +1,6 @@
 #search-container {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 5px;
+    width: 712px;
 }
-

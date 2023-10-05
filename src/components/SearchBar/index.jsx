@@ -22,10 +22,7 @@ const SearchBar = () => {
         `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${isNext ? prevSearch : input}&limit=10&offset=${offset}&rating=r&lang=en`
       );
       console.log(response); //checking api endpoint response
-
-      setGifs(response.data.data);
-
-
+      setGifs(response.data.data); //populating gifs array with response from GIPHY API
     } catch (error) {
       console.error("Error fetching data: ", error);
     }
@@ -40,12 +37,12 @@ const SearchBar = () => {
     }
     console.log(input)
     searchGIFs();
-    setPrevSearch(input)
-    setInput("");
+    setPrevSearch(input) //saving the input before reseting it
+    setInput(""); //reseting the input to empty
   }
   console.log("testing gifs array", gifs); //checking gifs array
 
-
+  //making sure next and prev buttons work for offset of GIFS
   useEffect(() => {
     searchGIFs(true);
   }, [offset])
@@ -67,12 +64,14 @@ const SearchBar = () => {
           Submit
         </Button>
         <Button variant="contained"
+          color="success"
           onClick={() => {
             setOffset(offset + 10);
           }}>
           Next
         </Button>
         <Button variant="contained"
+          color="success"
           onClick={() => {
             setOffset(offset - 10);
           }}>
