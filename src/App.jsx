@@ -6,7 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Toolbar, AppBar, Container, CssBaseline, Button } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 // import Button from '@mui/material/Button';
-import { Home, Search, Favorite } from "@mui/icons-material";
+import { Home, Search, Favorite, AccountCircleRounded } from "@mui/icons-material";
 // import HomeIcon from '@mui/icons-material/Home';
 // import SearchIcon from '@mui/icons-material/Search';
 // import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -16,13 +16,15 @@ import SearchPage from './pages/SearchPage';
 import FavoritesPage from './pages/FavoritesPage';
 import "./App.css"
 import { gifsContext } from './contexts/GIFsContext';
+import { primaryContext } from './contexts/primaryContext';
 
 
 
 
 function App() {
 
-  const { query, setQuery, gifs, setGifs } = useContext(gifsContext)
+  const { userName, isLoggedIn } = useContext(primaryContext);
+  const { query, setQuery, gifs, setGifs } = useContext(gifsContext);
 
 
   return (
@@ -32,7 +34,7 @@ function App() {
       <div id="main-container">
 
         <AppBar position="fixed">
-          <Toolbar>
+          <Toolbar> {/*flex box container provided by MUI*/}
             <Button color="inherit" component={RouterLink} to="/" startIcon={<Home />}>
               Home
             </Button>
@@ -42,16 +44,20 @@ function App() {
             <Button color="inherit" component={RouterLink} to="/favorites" startIcon={<Favorite />}>
               Favorites
             </Button>
+            <AccountCircleRounded id="log-icon" className={isLoggedIn ? "" : "loggedIn"} />
           </Toolbar>
         </AppBar>
 
         <div id="content-container">
           <Container>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/search" element={<SearchPage />} />
-              <Route path="/favorites" element={<FavoritesPage />} />
-            </Routes>
+            <div id='content-coloring'>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/search" element={<SearchPage />} />
+                <Route path="/favorites" element={<FavoritesPage />} />
+
+              </Routes>
+            </div>
           </Container>
         </div>
         <div id="footer">
