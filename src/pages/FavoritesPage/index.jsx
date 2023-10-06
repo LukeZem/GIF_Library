@@ -9,7 +9,7 @@ const FavoritesPage = () => {
 
   return (
     <div>
-      <h1>My Library</h1>
+      <h1>My Favorites</h1>
       {favs.map((favGif) => {
         return <img key={favGif.id} src={favGif.images.fixed_height.url} alt={favGif.title} />
       })}

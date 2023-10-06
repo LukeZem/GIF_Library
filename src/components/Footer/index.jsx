@@ -1,9 +1,29 @@
-import React from 'react'
+import { Container, Typography, Box } from '@mui/material';
 
-const Footer = () => {
+function Footer() {
   return (
-    <div>Footer</div>
-  )
+    <Box
+      component="footer"
+      sx={{
+        backgroundColor: 'primary.main',
+        color: 'white',
+        position: 'fixed',
+        width: '100vw',
+        left: 0,
+        right: 0,
+        bottom: 0,
+      }}
+    >
+      <Container>
+        <Typography variant="h6">
+          All GIFs provided by GIPHY
+        </Typography>
+        <Typography variant="body2">
+          All rights reserved © {new Date().getFullYear()}
+        </Typography>
+      </Container>
+    </Box>
+  );
 }
 
-export default Footer
+export default Footer;

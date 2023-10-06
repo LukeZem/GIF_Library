@@ -15,13 +15,13 @@
   min-height: 100vh;
 }
 
-#content-container {
+/* #content-container {
   margin-top: 64px;
   margin-bottom: 64px;
-  padding-bottom: 64px;
-}
+} */
 
 #footer {
+  padding-top: 64px;
   width: 100%;
   position: fixed;
   bottom: 0;

@@ -52,7 +52,7 @@ const SearchBar = () => {
     <div>
 
       <div id="search-container">
-        <h1>Search For a GIF</h1>
+        <h1>Search For YOUR GIF</h1>
         <div id="search-bar">
           <input
             id='input-bar'
