@@ -1,10 +1,10 @@
 #fav-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 16px;
 }
 
-#fav-gif-card img {
+.fav-gif-card img {
     width: 100%;
     height: auto;
     border-radius: 8px;
@@ -12,6 +12,6 @@
     transition: transform 0.2s;
 }
 
-#fav-gif-card img:hover {
+.fav-gif-card img:hover {
     transform: scale(1.05);
 }

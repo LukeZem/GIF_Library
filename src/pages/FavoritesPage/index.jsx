@@ -5,19 +5,23 @@ import "./index.css"
 
 
 const FavoritesPage = () => {
-
   const { favs } = useContext(gifsContext);
 
   return (
-    <div id="fav-container">
+    <div>
       <h1>My Favorites</h1>
-      {favs.map((favGif) => {
-        return <div key={favGif.id} id='fav-gif-card'>
-          <img src={favGif.images.fixed_height.url} alt={favGif.title} />
-        </div>
-      })}
+      <div id="fav-container">
+        {favs.map((favGif) => {
+          return (
+            <div key={favGif.id} className='fav-gif-card'>
+              <img src={favGif.images.fixed_height.url} alt={favGif.title} />
+            </div>
+          );
+        })}
+      </div>
     </div>
-  )
+  );
 }
+
 
 export default FavoritesPage

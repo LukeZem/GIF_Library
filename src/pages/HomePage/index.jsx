@@ -48,15 +48,17 @@ const HomePage = () => {
       <div id="header">
         {isLoggedIn ? <h1>Welcome Back {userName}</h1> : <h1>Login In</h1>}
       </div>
-      <div id='login'>
-        <input type="text" placeholder='Enter User Name...' value={text} onChange={(e) => setText(e.target.value)} />
-        <Button
-          variant="contained"
-          color="success"
-          onClick={handleLogin}>
-          Login
-        </Button>
-      </div>
+      {!isLoggedIn &&
+        <div id='login'>
+          <input type="text" placeholder='Enter User Name...' value={text} onChange={(e) => setText(e.target.value)} />
+          <Button
+            variant="contained"
+            color="success"
+            onClick={handleLogin}>
+            Login
+          </Button>
+        </div>
+      }
       {isLoggedIn && <div>
         <Accordion>
           <AccordionSummary
