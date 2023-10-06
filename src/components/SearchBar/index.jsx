@@ -19,7 +19,7 @@ const SearchBar = () => {
   const searchGIFs = async (isNext) => {
     try {
       const response = await axios.get(
-        `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${isNext ? prevSearch : input}&limit=10&offset=${offset}&rating=r&lang=en`
+        `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${isNext ? prevSearch : input}&limit=12&offset=${offset}&rating=r&lang=en`
       );
       console.log(response); //checking api endpoint response
       setGifs(response.data.data); //populating gifs array with response from GIPHY API
@@ -53,6 +53,7 @@ const SearchBar = () => {
 
       <div id="search-container">
         <h1>Search For YOUR GIF</h1>
+        <h6>Click a GIF to save it to your library</h6>
         <div id="search-bar">
           <input
             id='input-bar'
