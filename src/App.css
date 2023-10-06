@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 #main-container {
   display: Grid;
   grid-template-rows: 64px 1fr 64px;
@@ -13,8 +17,12 @@
 
 #content-container {
   margin-top: 64px;
+  margin-bottom: 64px;
+  padding-bottom: 64px;
 }
 
 #footer {
-  grid-row: 3/4;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
 }

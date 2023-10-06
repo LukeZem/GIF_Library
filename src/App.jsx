@@ -19,6 +19,7 @@ import { gifsContext } from './contexts/GIFsContext';
 
 
 
+
 function App() {
 
   const { query, setQuery, gifs, setGifs } = useContext(gifsContext)
@@ -53,7 +54,6 @@ function App() {
             </Routes>
           </Container>
         </div>
-
         <div id="footer">
           <Footer />
         </div>

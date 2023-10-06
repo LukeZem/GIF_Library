@@ -4,7 +4,7 @@ import axios from 'axios';
 import Button from '@mui/material/Button';
 import { primaryContext } from '../../contexts/primaryContext';
 import "./index.css"
-import GifCard from '../GifCard';
+
 
 const apiKey = import.meta.env.VITE_GIPHY_KEY;
 // const giphy = new GiphyFetch(apiKey)
@@ -53,31 +53,38 @@ const SearchBar = () => {
 
       <div id="search-container">
         <h1>Search For a GIF</h1>
-        <input
-          type="text"
-          placeholder="Search GIFs..."
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-        />
-        <Button variant="contained"
-          onClick={() => handleSubmit()} >
-          Submit
-        </Button>
-        <Button variant="contained"
+        <div id="search-bar">
+          <input
+            id='input-bar'
+            type="text"
+            placeholder="Search GIFs..."
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+          />
+          <Button
+            variant="contained"
+            onClick={() => handleSubmit()} >
+            Submit
+          </Button>
+        </div>
+        <Button
+          id='next-btn'
+          variant="contained"
           color="success"
           onClick={() => {
             setOffset(offset + 10);
           }}>
           Next
         </Button>
-        <Button variant="contained"
+        <Button
+          id='prev-btn'
+          variant="contained"
           color="success"
           onClick={() => {
             setOffset(offset - 10);
           }}>
           Previous
         </Button>
-        <GifCard />
       </div>
     </div>
   );
