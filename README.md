@@ -26,7 +26,8 @@ https://giffinder.onrender.com
 
 ## Unsolved Problems
 1) Working with MUI CSS and normal CSS to try and make the favorites page stay in scope of view.
-2) dynamically generating new columns as favorites page gets more populated.
+2) Webapp does not look good when accessed on a broser with a colored theme. Somehow this is altering the style of the webpage.
+3) dynamically generating new columns as favorites page gets more populated.
 
 ## Future Enhancements
 1) Storing the data on a DB instead of local storage so it is more permanent.
