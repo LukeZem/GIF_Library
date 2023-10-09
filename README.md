@@ -19,7 +19,7 @@ GIPHY API <br />
 ## Getting Started
 To clone this webapp 
 1) open a bash terminal in the folder you would like it to reside in. <br />
-2) git clone https://github.com/LukeZem/GIF_Library.git
+2) COPY & PASTE: git clone https://github.com/LukeZem/GIF_Library.git
 <br />
 Link to the website
 https://giffinder.onrender.com
