@@ -4,6 +4,7 @@ function Footer() {
   return (
     <Box
       component="footer"
+      // prop of MUI to apply in-line CSS styling
       sx={{
         backgroundColor: 'primary.main',
         color: 'white',

@@ -12,7 +12,7 @@ const apiKey = import.meta.env.VITE_GIPHY_KEY;
 
 const SearchBar = () => {
   const { gifs, setGifs } = useContext(gifsContext);
-  const { input, setInput, err, setErr, offset, setOffset } = useContext(primaryContext);
+  const { input, setInput, offset, setOffset } = useContext(primaryContext);
   const [prevSearch, setPrevSearch] = useState("");
 
 
@@ -31,8 +31,6 @@ const SearchBar = () => {
 
   const handleSubmit = () => {
     if (input.length === 0) {
-      //set error state to true
-      setErr(true)
       return
     }
     console.log(input)

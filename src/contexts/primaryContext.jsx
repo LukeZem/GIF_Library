@@ -8,7 +8,6 @@ export const PrimaryProvider = (props) => {
     const [userName, setUserName] = useState(storedUserName || ""); //applies whichever is true
     const [isLoggedIn, setIsLoggedIn] = useState(!!storedUserName); //casting to bool then checking
     const [input, setInput] = useState("");
-    const [err, setErr] = useState(false);
     const [offset, setOffset] = useState(0);
 
     return (<primaryContext.Provider value={
@@ -17,8 +16,6 @@ export const PrimaryProvider = (props) => {
             setUserName,
             input,
             setInput,
-            err,
-            setErr,
             offset,
             setOffset,
             isLoggedIn,

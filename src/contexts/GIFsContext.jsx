@@ -15,8 +15,6 @@ export const GIFsProvider = (props) => {
 
     return (<gifsContext.Provider value={
         {
-            // query,
-            // setQuery,
             gifs,
             setGifs,
             favs,

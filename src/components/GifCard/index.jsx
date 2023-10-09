@@ -8,10 +8,10 @@ const GifCard = () => {
     const [selectedGifs, setSelectedGifs] = useState([]);
 
     const saveFav = (clickedGif) => {
-        // setSelectedGifs(prevSelected => [...prevSelected, clickedGif])  //ASK CHASE, allowing user to categorize thier favs implementation
         setFavs(prevFavs => [...prevFavs, clickedGif]);
     };
 
+    //local storage
     useEffect(() => {
         localStorage.setItem('favs', JSON.stringify(favs));
         console.log("updated favs:", favs);
