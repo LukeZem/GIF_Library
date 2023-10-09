@@ -6,7 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Toolbar, AppBar, Container, CssBaseline, Button } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 // import Button from '@mui/material/Button';
-import { Home, Search, Favorite, AccountCircleRounded } from "@mui/icons-material";
+import { Home, Search, Favorite } from "@mui/icons-material";
 // import HomeIcon from '@mui/icons-material/Home';
 // import SearchIcon from '@mui/icons-material/Search';
 // import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -17,6 +17,7 @@ import FavoritesPage from './pages/FavoritesPage';
 import "./App.css"
 import { gifsContext } from './contexts/GIFsContext';
 import { primaryContext } from './contexts/primaryContext';
+import InstructionsModal from './components/InstructionsModal';
 
 
 
@@ -25,6 +26,16 @@ function App() {
 
   const { userName, isLoggedIn } = useContext(primaryContext);
   const { query, setQuery, gifs, setGifs } = useContext(gifsContext);
+
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
 
   return (
@@ -44,7 +55,10 @@ function App() {
             <Button color="inherit" component={RouterLink} to="/favorites" startIcon={<Favorite />}>
               Favorites
             </Button>
-            <AccountCircleRounded id="log-icon" className={isLoggedIn ? "" : "loggedIn"} />
+            <Button variant="contained" onClick={handleOpen}>
+              Show Instructions
+            </Button>
+            <InstructionsModal open={open} handleClose={handleClose} />
           </Toolbar>
         </AppBar>
 

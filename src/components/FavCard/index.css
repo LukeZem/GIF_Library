@@ -1,0 +1,26 @@
+#fav-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /*  automatically create columns as needed */
+    gap: 16px;
+    cursor: pointer;
+    margin: 16px;
+}
+
+#fav-card img {
+    width: 100%;
+
+    height: auto;
+    /* Retain original image aspect ratio */
+    border-radius: 8px;
+    /* give images rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    /* hover zoom effect */
+
+}
+
+#fav-card img:hover {
+    transform: scale(1.05);
+    /*zoom effect on hover */
+}

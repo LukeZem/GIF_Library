@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 16px;
+
 }
 
 .fav-gif-card img {
@@ -15,3 +16,7 @@
 .fav-gif-card img:hover {
     transform: scale(1.05);
 }
+
+/* #container {
+    margin-bottom: 100px;
+} */

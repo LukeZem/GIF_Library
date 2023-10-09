@@ -7,7 +7,6 @@ const GifCard = () => {
     const { gifs, favs, setFavs } = useContext(gifsContext)
     const [selectedGifs, setSelectedGifs] = useState([]);
 
-
     const saveFav = (clickedGif) => {
         // setSelectedGifs(prevSelected => [...prevSelected, clickedGif])  //ASK CHASE, allowing user to categorize thier favs implementation
         setFavs(prevFavs => [...prevFavs, clickedGif]);
@@ -21,7 +20,10 @@ const GifCard = () => {
     return (
         <div id="gif-card">
             {gifs.map((gif) => {
-                return <img onClick={() => saveFav(gif)} key={gif.id} src={gif.images.fixed_height.url} alt={gif.title} />
+                return <img onClick={() => saveFav(gif)}
+                    key={gif.id}
+                    src={gif.images.fixed_height.url}
+                    alt={gif.title} />
             })}
         </div>
     )
