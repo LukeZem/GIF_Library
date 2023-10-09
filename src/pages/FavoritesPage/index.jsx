@@ -31,4 +31,4 @@ const FavoritesPage = () => {
 
 
 
-export default FavoritesPage
+export default FavoritesPage;
